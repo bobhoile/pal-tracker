@@ -12,10 +12,6 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
     @Override
     public TimeEntry create(TimeEntry timeEntry){
         ++id;
-       /*
-        if(timeEntry.getId()==0) {
-            timeEntry.setId(repo.size() + 1);
-        }*/
         timeEntry.setId(id);
         repo.put(id, timeEntry);
         return timeEntry;
